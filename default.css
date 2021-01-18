@@ -1,0 +1,21 @@
+.header{
+  background-color: #49A049;
+  opacity:0.7;
+}
+
+.jumbotron{
+  background-color: #49A049;
+  opacity:0.7;
+  color:#000;
+}
+
+.footer{
+  background-color: #49A049;
+  opacity:0.7;
+}
+
+.panel-heading{
+  background: #49A049 !important;
+  opacity: 0.7;
+  color:#fff !important;
+}

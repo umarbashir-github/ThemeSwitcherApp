@@ -1,0 +1,58 @@
+/* COMMON STYLE FILE FOR ALL THEMES*/
+.header{
+  /position: fixed;
+  /z-index: 999;
+
+  width: 100%;
+  height:40px;
+  background-color: #49A049;
+  opacity:0.7;
+
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2A3D2A;
+  box-shadow: 0px 2px 5px #4b4b4b;
+}
+
+.wrapper{
+
+
+}
+
+.footer{
+  width: 100%;
+  height:100px;
+  margin-top: 10px;
+}
+
+ul{
+  padding-top:10px;
+}
+
+ul li{
+  display: inline;
+  list-style: none;
+  padding: 5px 15px;
+  margin-right:3px;
+
+  border-radius: 5px;
+  cursor: pointer;
+  border:1px solid black;
+}
+
+.colorSwatch{
+  text-decoration: none;
+  color:white;
+  text-align: center;
+
+}
+
+#Default{
+  background-color: #49A049;
+}
+#Blue{
+  background-color: #77CAE2;
+}
+
+#Red{
+  background-color: #D97472;
+}

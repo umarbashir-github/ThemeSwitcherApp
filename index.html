@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Theme Switcher</title>
+
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Custom CSS by Umar Bashir-->
+  <link rel="stylesheet" href="style.css">
+  <link id="ThemeSwitch"rel="stylesheet" href="default.css">
+</head>
+
+<body>
+
+  <!-- Header div which contains 3 list items for 3 themes/css files-->
+  <!-- Outer header div is used to stretch 100% on the screen-->
+  <div class="header">
+    <div class="container">
+      <div class="col-md-12 text-right">
+        <ul>
+          <!-- Trick: Each <li> is place inside <a> tag and attached to a function, ther is no text and href attribute for for <a> tag-->
+          <a  class="colorSwatch" onclick="switchTheme('default.css')"><li id="Default"></li></a>
+          <a class="colorSwatch" onclick="switchTheme('blue.css')"><li id="Blue"></li></a>
+          <a class="colorSwatch" onclick="switchTheme('red.css')"><li id="Red"></li></a>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Header div ends-->
+
+  <!-- containder div for content of the webpage -->
+  <div class="container">
+
+    <!-- 1st row contains Jumbotron and a button -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron text-center">
+          <h1>Theme Switcher</h1>
+          <p>This application is developed by me to show you how to switch Themes on the Go!</p>
+          <button class="btn btn-primary btn-lg" id="ThemeBtn">Change Theme</button>
+        </div>
+      </div>
+    </div>
+    <!-- 1st row ends-->
+
+    <!-- 2nd row contains two panels -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3>Sample Heading 1</h3>
+            </div>
+            <div class="panel-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aspernatur qui dolore quis optio, in nemo voluptatem laudantium
+                ad repellat aliquam est ut perspiciatis iusto doloremque laboriosam
+                facere eveniet quam, nihil suscipit. Atque perspiciatis similique,
+                quae natus magnam dicta officia voluptates assumenda deserunt rem
+                earum, quasi odio error. Excepturi sequi sapiente est molestiae
+                laboriosam, maiores, omnis minus commodi explicabo porro praesentium
+                pariatur culpa autem at expedita quos quisquam hic dignissimos doloribus
+                quaerat molestias, accusamus nihil dolorem assumenda. Doloribus minus
+                voluptatibus minima deserunt vero, illum labore corporis inventore porro
+                molestiae dolorem illo, culpa veniam, expedita voluptatem, tempore perferendis
+                alias! Vero totam, veritatis.</p>
+            </div>
+
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3>Sample Heading 2</h3>
+            </div>
+            <div class="panel-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aspernatur qui dolore quis optio, in nemo voluptatem laudantium
+                ad repellat aliquam est ut perspiciatis iusto doloremque laboriosam
+                facere eveniet quam, nihil suscipit. Atque perspiciatis similique,
+                quae natus magnam dicta officia voluptates assumenda deserunt rem
+                earum, quasi odio error. Excepturi sequi sapiente est molestiae
+                laboriosam, maiores, omnis minus commodi explicabo porro praesentium
+                pariatur culpa autem at expedita quos quisquam hic dignissimos doloribus
+                quaerat molestias, accusamus nihil dolorem assumenda. Doloribus minus
+                voluptatibus minima deserunt vero, illum labore corporis inventore porro
+                molestiae dolorem illo, culpa veniam, expedita voluptatem, tempore perferendis
+                alias! Vero totam, veritatis.</p>
+            </div>
+
+          </div>
+      </div>
+    </div>
+    <!-- 2nd row ends -->
+
+  <!-- Empty footer which stretches 100% on screen -->
+  </div>
+  <div class="footer">
+
+  </div>
+  <!-- footer ends -->
+
+
+</body>
+
+<!-- Jquery CDN file -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Script for switching theme -->
+<script type="text/javascript">
+  /* $(document).ready(fucntion(){
+    $('#Blue').click(function(){
+      $('#ThemeSwitch').attr('href','blue.css');
+    })
+  }) */
+
+  function switchTheme(sheet){
+    document.getElementById('ThemeSwitch').setAttribute('href',sheet);
+  }
+</script>
+
+<!-- Script for sliding the hedar up and down on the button click -->
+<script type="text/javascript">
+
+    $(document).ready(function (){
+      $('.header').hide();
+    })
+
+    $(document).ready(function () {
+      $('#ThemeBtn').click(function (){
+        $('.header').slideToggle();
+
+      })
+    })
+</script>
+
+
+</html>
